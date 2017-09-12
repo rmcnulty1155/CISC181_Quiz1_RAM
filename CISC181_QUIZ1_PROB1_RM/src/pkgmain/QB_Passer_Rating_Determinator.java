@@ -41,16 +41,16 @@ public class QB_Passer_Rating_Determinator {
 		interceptions = input5.nextDouble();
 		
 		a = ((PassesCompleted / (double) PassesAttempted) - 0.3) * 5.0;
-		b = ((TotalYards / (double) PassesAttempted) - 3) * .25;
+		b = ((TotalYards / (double) PassesAttempted) - 3.0) * .25;
 		c = (touchdowns / (double) PassesAttempted) * 20.0;
 		d = 2.375 - ((interceptions / (double) PassesAttempted) * 25.0);
 		
 		
-		if ((a + b + c + d) < (4 * 2.375)) {
+		if ((a + b + c + d) < (4.0 * 2.375)) {
 		PasserRating = ((a + b + c + d) / 6.0) * 100.0;
 		System.out.printf("The QB's passer rating is: %.1f", PasserRating);
 		}
-		else if ((a + b + c + d) >= (4 * 2.375))  {
+		else if ((a + b + c + d) >= (4.0 * 2.375))  {
 		PasserRating = 158.3;
 		System.out.printf("The QB's passer rating is: %.1f", PasserRating);
 		}
